@@ -1,0 +1,36 @@
+.main {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  height: 100%;
+  line-height: 2em;
+
+  .info {
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 128px;
+      height: auto;
+      display: inline-block;
+      border-radius: 100%;
+      box-shadow: 0 0 0 0.3618em rgb(0 0 0 / 5%);
+      margin: 10px auto;
+      transition: all ease 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-0.75em);
+      }
+    }
+
+    .nickname {
+      font-size: 2em;
+    }
+
+    .description {
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+    }
+  }
+}

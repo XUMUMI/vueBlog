@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: light) {
+  html {
+    color: #161209;
+
+    a {
+      color: #161209;
+
+      &:hover {
+        color: #0700FF;
+      }
+    }
+
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #292A2D;
+    color: #A9A9B3;
+
+    a {
+      color: #A9A9B3;
+
+      &:hover {
+        color: #FF0100;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+$height: 4rem;
+.top {
+  width: -webkit-fill-available;
+  max-width: 1200px;
+
+  height: $height;
+  line-height: $height;
+
+  margin: 0 auto;
+  padding: 0 1em 0 1em;
+
+  display: flex;
+  justify-content: space-between;
+
+  .left, .right {
+    display: inline-block;
+  }
+}

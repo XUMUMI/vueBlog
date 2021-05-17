@@ -4,7 +4,7 @@
       <a>文章</a>
       <a>朋友</a>
     </Top>
-    <Home />
+    <router-view />
     <Foot class="foot" name="XUMUMI" number="粤ICP备17055644号" />
   </div>
 </template>

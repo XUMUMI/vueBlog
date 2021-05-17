@@ -1,0 +1,16 @@
+.item {
+  display: block;
+  margin-left: 2rem;
+  .title {
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .date {
+    float: right;
+    text-align: right;
+    color: #a9a9b3;
+  }
+}

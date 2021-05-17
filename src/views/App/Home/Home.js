@@ -1,4 +1,4 @@
-import Icon from "../Icon/Icon.vue";
+import Icon from "../../../components/Icon/Icon.vue";
 export default {
   name: "Home",
   components: { Icon },

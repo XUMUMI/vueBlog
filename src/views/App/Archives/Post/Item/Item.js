@@ -3,6 +3,6 @@ export default {
   props: {
     title: String,
     date: String,
-    url: String
+    path: String
   }
 };

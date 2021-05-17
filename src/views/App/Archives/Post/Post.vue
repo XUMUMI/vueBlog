@@ -5,7 +5,7 @@
       v-for="article in articles"
       :key="article"
       :title="article.title"
-      :url="article.url"
+      :path="article.path"
       :date="article.date"
     />
   </div>

@@ -4,7 +4,7 @@
     :title="title"
     :target="self ? '_self' : '_blank'"
     rel="noopener"
-    :href="url"
+    :href="path"
   >
     <i :class="`iconfont icon-${icon}`"></i>
   </a>

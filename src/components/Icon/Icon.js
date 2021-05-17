@@ -3,7 +3,7 @@ export default {
   props: {
     self: Boolean,
     title: String,
-    url: String,
+    path: String,
     icon: String
   }
 };

@@ -22,4 +22,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 XUMUMI.png
-src/posts
+src/assets/posts
+src/assets/image
+src/assets/pages

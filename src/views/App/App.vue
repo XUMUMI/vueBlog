@@ -1,11 +1,13 @@
 <template>
-  <div class="cont" data-title="标题">
-    <Top class="top" title="XUMUMI TT">
-      <a>文章</a>
-      <a>朋友</a>
+  <div class="cont">
+    <Top class="top" :title="title">
+      <router-link to="/archives">文章</router-link>
+      <router-link v-for="page in pages" :key="page" :to="page.path">{{
+        page.title
+      }}</router-link>
     </Top>
     <router-view />
-    <Foot class="foot" name="XUMUMI" number="粤ICP备17055644号" />
+    <Foot class="foot" :name="nickName" :recordNumber="recordNumber" />
   </div>
 </template>
 <script src="./App.js" />

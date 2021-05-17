@@ -1,3 +1,7 @@
+$blue: #0700FF;
+$red: #FF0100;
+$gray: #A9A9B3;
+
 @media (prefers-color-scheme: light) {
   html {
     color: #161209;
@@ -6,23 +10,41 @@
       color: #161209;
 
       &:hover {
-        color: #0700FF;
+        color: $blue;
       }
     }
 
+    .article {
+      a {
+        color: dodgerblue;
+
+        &:hover {
+          color: $red;
+        }
+      }
+
+      code, pre {
+        background-color: lightgray;
+        line-height: 1.7em;
+        padding: 3px 5px;
+        border-radius: 4px;
+        font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+      }
+
+    }
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     background: #292A2D;
-    color: #A9A9B3;
+    color: $gray;
 
     a {
-      color: #A9A9B3;
+      color: $gray;
 
       &:hover {
-        color: #FF0100;
+        color: $red;
       }
     }
   }

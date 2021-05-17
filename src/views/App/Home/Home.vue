@@ -1,24 +1,19 @@
 <template>
   <div class="main">
     <div class="info">
-      <a href="/archives"> <img src="~@/image/XUMUMI.png" alt="XUMUMI"/></a>
-      <div class="nickname">XUMUMI</div>
-      <div class="description">
-        <p>
-          When you don’t create things, you become defined by your tastes rather
-          than ability.
-          <br />
-          Your tastes only narrow and exclude people.
-          <strong>So create</strong>.
-        </p>
-      </div>
+      <router-link to="/archives">
+        <!--TODO 矢量化-->
+        <img src="~@/assets/image/logo.png" :alt="nickName" />
+      </router-link>
+      <div class="nickname">{{ nickName }}</div>
+      <div class="description" v-html="description" />
       <div class="links">
-        <Icon title="Blog" url="/archives" icon="blog" self />
+        <Icon title="Blog" path="/archives" icon="blog" self />
         <Icon
           v-for="(value, name) in icons"
           :key="name"
           :title="name"
-          :url="value.url"
+          :path="value.path"
           :icon="value.icon"
         />
       </div>

@@ -2,7 +2,9 @@
   <div class="foot">
     <span>
       © {{ name }} |
-      <a href="https://beian.miit.gov.cn/" target="_blank"> {{ number }}</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank">
+        {{ recordNumber }}</a
+      >
     </span>
   </div>
 </template>

@@ -1,0 +1,26 @@
+{
+  "Zhihu": {
+    "path": "https://www.zhihu.com/people/xumumi",
+    "icon": "zhihu"
+  },
+  "FaceBook": {
+    "path": "https://www.facebook.com/XUMUMI",
+    "icon": "facebook"
+  },
+  "Twitter": {
+    "path": "https://twitter.com/xxumumi",
+    "icon": "twitter"
+  },
+  "Instagram": {
+    "path": "https://www.instagram.com/XUMUMI",
+    "icon": "instagram"
+  },
+  "Reddit": {
+    "path": "https://www.reddit.com/user/XUMUMI",
+    "icon": "reddit"
+  },
+  "Github": {
+    "path": "https://github.com/XUMUMI",
+    "icon": "github"
+  }
+}

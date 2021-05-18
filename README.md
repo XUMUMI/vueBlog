@@ -1,24 +1,36 @@
-# blog
+# 博客
 
-## Project setup
+## 项目部署
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发编译及热重载
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译工件并发布
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 格式化代码
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 配置文件目录
+```
+/src/assets/info
+```
+
+### 文章目录
+```
+/src/assets/posts
+```
+
+### 其他页面
+```
+/src/assets/pages
+```

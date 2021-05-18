@@ -1,8 +1,8 @@
 <template>
-  <router-link class="item" :to="path">
+  <router-link :to="path" class="item">
     <div class="title">{{ title }}</div>
     <span class="date">{{ date }}</span>
   </router-link>
 </template>
 <script src="./Item.js" />
-<style scoped lang="scss" src="./Item.scss" />
+<style lang="scss" scoped src="./Item.scss" />

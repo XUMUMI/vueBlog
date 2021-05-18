@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <div class="left">
-      <a href="/">{{ title }}</a>
+      <router-link to="/">{{ title }}</router-link>
     </div>
     <div class="right">
       <slot />
@@ -9,4 +9,4 @@
   </div>
 </template>
 <script src="./Top.js" />
-<style scoped lang="scss" src="./Top.scss" />
+<style lang="scss" scoped src="./Top.scss" />

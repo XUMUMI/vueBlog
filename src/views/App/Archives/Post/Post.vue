@@ -4,11 +4,11 @@
     <Item
       v-for="article in articles"
       :key="article"
-      :title="article.title"
-      :path="article.path"
       :date="article.date"
+      :path="article.path"
+      :title="article.title"
     />
   </div>
 </template>
 <script src="./Post.js" />
-<style scoped lang="scss" src="./Post.scss" />
+<style lang="scss" scoped src="./Post.scss" />

@@ -13,7 +13,7 @@ html, body, #app, pre, code {
   font-family: Monaco, Consolas, Menlo, Consolas, monospace;
 }
 
-html, body, #app{
+html, body, #app {
   min-height: 100vh;
   width: 100%;
 }
@@ -30,8 +30,21 @@ a {
   cursor: pointer;
 }
 
-code:not(pre code){
+p a {
+  color: dodgerblue;
+}
+
+pre{
+  font-size: 13px;
+  line-height: 1.7em;
+}
+
+code:not(pre code) {
   display: inline-block;
-  padding: 0 0.5em;
+  padding: 0 .5em;
   border-radius: .5em;
+}
+
+.hljs-ln .hljs-ln-line {
+  padding: 0 10px;
 }

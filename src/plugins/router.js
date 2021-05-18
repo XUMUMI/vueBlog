@@ -24,9 +24,12 @@ const routes = [
     redirect: "/"
   }
 ];
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-});
 
-export default router;
+export default app => {
+  app.use(
+    createRouter({
+      history: createWebHistory(),
+      routes
+    })
+  );
+};

@@ -1,12 +1,12 @@
 <template>
-  <div class="archive">
+  <div>
     <Post
       v-for="post in posts"
       :key="post"
-      :pack="post.pack"
       :articles="post.articles"
+      :pack="post.pack"
     />
   </div>
 </template>
 <script src="./Archives.js" />
-<style scoped lang="scss" src="./Archives.scss" />
+<style lang="scss" scoped src="./Archives.scss" />

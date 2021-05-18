@@ -1,5 +1,5 @@
 import Article from "@/views/App/Article/Article.vue";
-import { defaultPageName } from "@/assets/info/conf";
+import { defaultPageName } from "@/assets/info/information";
 
 const files = require.context("@/assets/posts/", true, /\.md$/);
 

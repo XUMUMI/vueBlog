@@ -11,10 +11,14 @@
       }
     }
   }
+
+  td.hljs-ln-line.hljs-ln-numbers {
+    border-right: $text 1px solid;
+  }
 }
 
-@mixin code($text: #248DC0, $background: #fafafa){
-  code:not(pre code){
+@mixin code($text: #248DC0, $background: #fafafa) {
+  code:not(pre code) {
     color: $text;
     background: $background;
   }

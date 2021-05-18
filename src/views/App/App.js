@@ -9,5 +9,8 @@ export default {
   components: { Home, Top, Foot },
   data() {
     return { nickName, recordNumber, title, pages };
+  },
+  updated() {
+    this.pages = pages;
   }
 };

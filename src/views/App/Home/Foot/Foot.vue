@@ -9,4 +9,4 @@
   </div>
 </template>
 <script src="./Foot.js" />
-<style scoped lang="scss" src="./Foot.scss" />
+<style lang="scss" scoped src="./Foot.scss" />

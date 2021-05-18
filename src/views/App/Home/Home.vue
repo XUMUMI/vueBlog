@@ -3,22 +3,22 @@
     <div class="info">
       <router-link to="/archives">
         <!--TODO 矢量化-->
-        <img src="~@/assets/image/logo.png" :alt="nickName" />
+        <img :alt="nickName" src="~@/assets/image/logo.png" />
       </router-link>
       <div class="nickname">{{ nickName }}</div>
       <div class="description" v-html="description" />
       <div class="links">
-        <Icon title="Blog" path="/archives" icon="blog" self />
+        <Icon icon="blog" path="/archives" self title="Blog" />
         <Icon
           v-for="(value, name) in icons"
           :key="name"
-          :title="name"
-          :path="value.path"
           :icon="value.icon"
+          :path="value.path"
+          :title="name"
         />
       </div>
     </div>
   </div>
 </template>
 <script src="./Home.js" />
-<style scoped lang="scss" src="./Home.scss" />
+<style lang="scss" scoped src="./Home.scss" />

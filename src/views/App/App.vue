@@ -2,11 +2,11 @@
   <div class="cont">
     <Top class="top" :title="title">
       <router-link to="/archives">文章</router-link>
-      <router-link v-for="page in pages" :key="page" :to="page.path">{{
-        page.title
-      }}</router-link>
+      <router-link v-for="page in pages" :key="page" :to="page.path">
+        {{ page.title }}
+      </router-link>
     </Top>
-    <router-view />
+    <router-view class="main" />
     <Foot class="foot" :name="nickName" :recordNumber="recordNumber" />
   </div>
 </template>

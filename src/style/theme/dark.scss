@@ -1,0 +1,10 @@
+@use "theme";
+
+$text: #A9A9B3;
+$link: #FF0100;
+$background: #292A2D;
+@include theme.html($text, $link, $background);
+
+$text: #F92672;
+$background: #282C34;
+@include theme.code($text, $background);

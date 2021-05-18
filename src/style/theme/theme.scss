@@ -1,0 +1,21 @@
+@mixin html($text: #161209, $link: #0700FF, $background: #FFFFFF) {
+  html {
+    color: $text;
+    background: $background;
+
+    a {
+      color: $text;
+
+      &:hover {
+        color: $link;
+      }
+    }
+  }
+}
+
+@mixin code($text: #248DC0, $background: #fafafa){
+  code:not(pre code){
+    color: $text;
+    background: $background;
+  }
+}

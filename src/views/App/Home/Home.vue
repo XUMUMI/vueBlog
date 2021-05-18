@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="home">
     <div class="info">
       <router-link to="/archives">
         <!--TODO 矢量化-->

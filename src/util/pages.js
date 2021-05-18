@@ -17,6 +17,7 @@ for (const file of files.keys()) {
     path,
     name: title,
     component: Article,
+    meta: { title },
     props: { cont: files(file) }
   });
 }

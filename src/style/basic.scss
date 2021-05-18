@@ -1,7 +1,8 @@
-@import "~highlight.js/styles/atom-one-light.css" (prefers-color-scheme: light);
+@import "font";
+@import "~highlight.js/styles/atom-one-light.css";
 @import "~highlight.js/styles/atom-one-dark-reasonable.css" (prefers-color-scheme: dark);
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme) {
   @import "theme/light";
 }
 
@@ -21,7 +22,12 @@ html, body, #app {
 body {
   margin: 0;
   font-size: 11pt;
-  line-height: 2em;
+  line-height: 2rem;
+}
+
+hr{
+  margin: 30px;
+  border-width: 0;
 }
 
 a {

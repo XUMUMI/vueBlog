@@ -1,13 +1,17 @@
 <template>
   <div class="cont">
-    <Top :title="title" class="top">
-      <router-link to="/archives">文章</router-link>
+    <Top :title="info.title" class="top">
+      <router-link to="/archives">{{ info.archivesName }}</router-link>
       <router-link v-for="page in pages" :key="page" :to="page.path">
         {{ page.title }}
       </router-link>
     </Top>
     <router-view class="main" />
-    <Foot :name="nickName" :recordNumber="recordNumber" class="foot" />
+    <Foot
+      :name="info.nickName"
+      :recordNumber="info.recordNumber"
+      class="foot"
+    />
   </div>
 </template>
 <script src="./App.js" />

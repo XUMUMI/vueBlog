@@ -1,5 +1,5 @@
 import Article from "@/views/App/Article/Article.vue";
-import { defaultPageName } from "@/assets/info/information";
+import { defaultPackName } from "@/assets/info/information";
 
 const files = require.context("@/assets/posts/", true, /\.md$/);
 
@@ -12,7 +12,7 @@ for (const file of files.keys()) {
   /* 只渲染一层和两层的文件 */
   if (fileInfo.length > 2) continue;
   /* 获取归档分类，一层归为默认分类 */
-  const pack = 2 === fileInfo.length ? fileInfo[0] : defaultPageName;
+  const pack = 2 === fileInfo.length ? fileInfo[0] : defaultPackName;
   /* 如果是一层，文件名会落入 0，两层则落入 1。这里先获取 1，如果 1 没有就说明文件名在 0 */
   const title = fileInfo[1] ?? fileInfo[0];
   /* 为了支持中文和空格，必须对分类名和文件名进行编码 */
@@ -24,6 +24,7 @@ for (const file of files.keys()) {
     path,
     name: title,
     component: Article,
+    meta: { title },
     props: { cont: files(file) }
   });
 }

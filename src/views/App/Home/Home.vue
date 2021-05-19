@@ -2,8 +2,7 @@
   <div class="home">
     <div class="info">
       <router-link to="/archives">
-        <!--TODO 矢量化-->
-        <img :alt="nickName" src="~@/assets/image/logo.png" />
+        <img :alt="nickName" src="~@/assets/image/logo.svg" />
       </router-link>
       <div class="nickname">{{ nickName }}</div>
       <div class="description" v-html="description" />

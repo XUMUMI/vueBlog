@@ -2,7 +2,7 @@ export default {
   name: "Article",
   props: { cont: String },
   mounted() {
-    document.querySelectorAll("pre").forEach(this.formatCode);
+    this.$refs.cont.getElementsByTagName("pre").forEach(this.formatCode);
   },
   methods: {
     formatCode(element) {

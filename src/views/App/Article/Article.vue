@@ -1,5 +1,5 @@
 <template>
-  <div v-html="cont" />
+  <div ref="cont" v-html="cont" />
 </template>
 <script src="./Article.js" />
 <style lang="scss" src="./Article.scss" />

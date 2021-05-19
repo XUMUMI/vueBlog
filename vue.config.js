@@ -9,5 +9,8 @@ module.exports = {
       .use("markdown-loader")
       .loader("markdown-loader")
       .end();
+  },
+  configureWebpack: {
+    externals: {}
   }
 };

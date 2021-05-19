@@ -1,43 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/App/Home/Home.vue";
-import Archives from "@/views/App/Archives/Archives.vue";
-import { postsRoutes } from "@/util/posts";
-import { title, nickName } from "@/assets/info/information";
-import { pagesRoutes } from "@/util/pages";
+import routes from "@/conf/routes";
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-    meta: { title },
-    props: { nickName }
-  },
-  {
-    path: "/archives",
-    name: "Archives",
-    component: Archives,
-    meta: { title }
-  },
-  ...postsRoutes,
-  ...pagesRoutes,
-  {
-    path: "/:pathMatch(.*)*",
-    redirect: "/"
-  }
-];
+/**
+ * 路由发生变化修改页面 title
+ */
+function setTitle(to, from, next) {
+  if (to.meta.title) document.title = to.meta.title;
+  next();
+}
 
 export default app => {
-  const router = createRouter({
-    history: createWebHistory(),
-    routes
-  });
-  router.beforeEach((to, from, next) => {
-    /* 路由发生变化修改页面title */
-    if (to.meta.title) {
-      document.title = to.meta.title;
-    }
-    next();
-  });
+  const router = createRouter({ history: createWebHistory(), routes });
+  router.beforeEach(setTitle);
   app.use(router);
 };

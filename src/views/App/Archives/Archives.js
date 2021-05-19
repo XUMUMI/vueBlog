@@ -6,8 +6,5 @@ export default {
   components: { Post },
   data() {
     return { posts };
-  },
-  updated() {
-    this.posts = posts;
   }
 };

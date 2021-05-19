@@ -3,9 +3,17 @@
     "path": "https://www.zhihu.com/people/xumumi",
     "icon": "zhihu"
   },
+  "Linkedin": {
+    "path":"https://www.linkedin.com/in/xumumi-xmm-4a549911b/",
+    "icon": "linkedin"
+  },
   "FaceBook": {
     "path": "https://www.facebook.com/XUMUMI",
     "icon": "facebook"
+  },
+  "Skype": {
+    "path": "https://join.skype.com/invite/wRgRAxdezdtr",
+    "icon": "skype"
   },
   "Twitter": {
     "path": "https://twitter.com/xxumumi",
@@ -15,6 +23,10 @@
     "path": "https://www.instagram.com/XUMUMI",
     "icon": "instagram"
   },
+  "Codepen": {
+    "path": "https://codepen.io/xumumi",
+    "icon": "codepen"
+  },
   "Reddit": {
     "path": "https://www.reddit.com/user/XUMUMI",
     "icon": "reddit"
@@ -22,5 +34,21 @@
   "Github": {
     "path": "https://github.com/XUMUMI",
     "icon": "github"
+  },
+  "Gitlab": {
+    "path": "https://gitlab.com/XUMUMI",
+    "icon": "gitlab"
+  },
+  "Youtube": {
+    "path": "https://www.youtube.com/channel/UCTHTQVIQrpXUAH_-xW8NmRA",
+    "icon": "youtube"
+  },
+  "WeiBo": {
+    "path": "https://weibo.com/XUMUMI",
+    "icon": "weibo"
+  },
+  "QQ": {
+    "path": "https://wpa.qq.com/msgrd?v=3&uin=869088047&site=qq&menu=yes",
+    "icon": "qq"
   }
 }

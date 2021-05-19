@@ -9,8 +9,5 @@ export default {
   components: { Home, Top, Foot },
   data() {
     return { info, pages };
-  },
-  updated() {
-    this.pages = pages;
   }
 };

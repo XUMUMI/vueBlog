@@ -30,5 +30,12 @@
       margin-block-start: 1em;
       margin-block-end: 1em;
     }
+
+    .links {
+      max-width: 700px;
+      word-wrap: break-word;
+      word-break: break-all;
+      margin: 0 auto;
+    }
   }
 }

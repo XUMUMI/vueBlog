@@ -1,4 +1,5 @@
 import register from "@/util/articleRegister";
+import component from "@/components/Page/Page.vue";
 
 const files = require.context("@/assets/pages/", false, /\.md$/);
 
@@ -19,7 +20,7 @@ const getFileInfo = file => {
   const title = file.substring(2, file.length - 3);
   /* 为了支持中文和空格，必须对分类名和文件名进行编码 */
   const path = `/${encodeURIComponent(title)}`;
-  return { title, path, contents: pages };
+  return { title, path, contents: pages, component };
 };
 
 /**

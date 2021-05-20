@@ -13,6 +13,14 @@
   }
 }
 
+@mixin highlight($link: dodgerblue) {
+  p a,
+  .page h2::before,
+  .page h3::before {
+    color: $link;
+  }
+}
+
 @mixin code($text: #248DC0, $background: #fafafa) {
   code:not(pre code) {
     color: $text;

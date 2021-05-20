@@ -1,13 +1,8 @@
+import Page from "@/components/Page/Page.vue";
+import Copyright from "@/views/App/Article/Copyright/Copyright.vue";
+
 export default {
   name: "Article",
-  props: { cont: String },
-  mounted() {
-    this.$refs.cont.getElementsByTagName("pre").forEach(this.formatCode);
-  },
-  methods: {
-    formatCode(element) {
-      this.$hljs.highlightElement(element);
-      this.$hljs.lineNumbersBlock(element);
-    }
-  }
+  components: { Page, Copyright },
+  props: { cont: String }
 };

@@ -9,7 +9,11 @@ $text: #383a42;
 }
 
 td.hljs-ln-line.hljs-ln-numbers {
-  border-right: $text 1px solid;
+  border-right: rgba($text, .25) 1px solid;
+}
+
+.hljs-ln .hljs-ln-line {
+  padding: 0 10px;
 }
 
 .hljs-comment,

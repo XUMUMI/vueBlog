@@ -1,5 +1,8 @@
 <template>
-  <div ref="cont" v-html="cont" />
+  <div>
+    <Page :cont="cont" />
+    <Copyright />
+  </div>
 </template>
 <script src="./Article.js" />
 <style lang="scss" src="./Article.scss" />

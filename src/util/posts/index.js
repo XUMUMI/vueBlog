@@ -1,6 +1,7 @@
 import { defaultPackName } from "@/assets/info/information";
 import getPack from "@/util/posts/getPack";
 import register from "@/util/articleRegister";
+import component from "@/views/App/Article/Article.vue";
 
 const files = require.context("@/assets/posts/", true, /\.md$/);
 
@@ -24,7 +25,7 @@ const getFileInfo = file => {
   const title = fileInfo[1] ?? fileInfo[0];
   /* 为了支持中文和空格，必须对分类名和文件名进行编码 */
   const path = `/${encodeURIComponent(pack)}/${encodeURIComponent(title)}`;
-  return { title, path, contents: getPack(pack).articles };
+  return { title, path, contents: getPack(pack).articles, component };
 };
 
 /**

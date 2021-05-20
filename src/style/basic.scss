@@ -23,7 +23,7 @@ body {
   line-height: 2rem;
 }
 
-hr{
+hr {
   margin: 30px;
   border-width: 0;
 }
@@ -34,13 +34,10 @@ a {
   cursor: pointer;
 }
 
-p a {
-  color: dodgerblue;
-}
-
-pre{
+pre {
   font-size: 13px;
   line-height: 1.7em;
+  border-radius: .5em;
 }
 
 code:not(pre code) {
@@ -49,6 +46,12 @@ code:not(pre code) {
   border-radius: .5em;
 }
 
-.hljs-ln .hljs-ln-line {
-  padding: 0 10px;
+.page h2::before {
+  content: "#";
+  margin-right: 5px;
+}
+
+.page h3::before {
+  content: "|";
+  margin-right: 5px;
 }

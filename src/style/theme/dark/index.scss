@@ -2,10 +2,13 @@
 
 @import "hljs";
 
+$highlight: #fff;
 $text: #A9A9B3;
 $link: #FF0100;
 $background: #292A2D;
 @include theme.html($text, $link, $background);
+
+@include theme.highlight($highlight);
 
 $text: #F92672;
 $background: #282C34;

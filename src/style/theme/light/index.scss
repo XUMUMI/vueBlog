@@ -1,4 +1,6 @@
-@use "theme";
+@use "../theme";
+
+@import "hljs";
 
 @include theme.html;
 @include theme.code;

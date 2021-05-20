@@ -1,6 +1,4 @@
 @import "font";
-@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-light.min.css";
-@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark-reasonable.min.css" (prefers-color-scheme: dark);
 
 @media (prefers-color-scheme) {
   @import "theme/light";

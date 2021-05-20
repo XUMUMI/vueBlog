@@ -1,4 +1,4 @@
-import hljs from "highlight.js";
+import hljs from "highlight";
 
 window.hljs = hljs;
 export default app => {

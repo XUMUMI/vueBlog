@@ -11,6 +11,10 @@ module.exports = {
       .end();
   },
   configureWebpack: {
-    externals: {}
+    externals: {
+      vue: "Vue",
+      "vue-router": "VueRouter",
+      highlight: "hljs"
+    }
   }
 };

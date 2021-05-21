@@ -1,7 +1,7 @@
 <template>
   <div class="cont">
     <Top :title="info.title" class="top">
-      <router-link to="/archives">{{ info.archivesName }}</router-link>
+      <router-link to="/archives">{{ $t("archives_name") }}</router-link>
       <router-link v-for="page in pages" :key="page" :to="page.path">
         {{ page.title }}
       </router-link>

@@ -12,9 +12,11 @@ module.exports = {
   },
   configureWebpack: {
     externals: {
+      "highlight.js": "hljs",
+      marked: "marked",
       vue: "Vue",
-      "vue-router": "VueRouter",
-      highlight: "hljs"
+      "vue-i18n": "VueI18n",
+      "vue-router": "VueRouter"
     }
   }
 };

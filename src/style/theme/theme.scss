@@ -14,7 +14,7 @@
 }
 
 @mixin highlight($link: dodgerblue) {
-  .page{
+  .page {
     p a,
     h2::before,
     h3::before {

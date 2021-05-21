@@ -1,4 +1,4 @@
-import { defaultPackName } from "@/assets/info/information";
+import { $t } from "@/plugins/i18n/i18n";
 import getPack from "@/util/posts/getPack";
 import register from "@/util/articleRegister";
 import component from "@/views/Article/Article.vue";
@@ -20,7 +20,7 @@ export const postsRoutes = [];
 const getFileInfo = file => {
   const fileInfo = file.substring(2, file.length - 3).split("/");
   /* 获取归档分类，一层归为默认分类 */
-  const pack = 2 === fileInfo.length ? fileInfo[0] : defaultPackName;
+  const pack = 2 === fileInfo.length ? fileInfo[0] : $t("default_pack_name");
   /* 如果是一层，文件名会落入 0，两层则落入 1。这里先获取 1，如果 1 没有就说明文件名在 0 */
   const title = fileInfo[1] ?? fileInfo[0];
   /* 为了支持中文和空格，必须对分类名和文件名进行编码 */

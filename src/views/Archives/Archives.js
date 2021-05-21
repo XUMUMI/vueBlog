@@ -1,4 +1,4 @@
-import Post from "@/views/App/Archives/Post/Post.vue";
+import Post from "./Post/Post.vue";
 import { posts } from "@/util/posts";
 
 export default {

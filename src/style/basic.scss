@@ -1,8 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/monaco");
 
-@media (prefers-color-scheme) {
-  @import "theme/light";
-}
+@import "theme/light";
 
 @media (prefers-color-scheme: dark) {
   @import "theme/dark";

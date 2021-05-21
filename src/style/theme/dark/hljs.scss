@@ -1,15 +1,19 @@
 $text: #ABB2BF;
+$background: #282c34;
 
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   color: $text;
-  background: #282c34;
+  background: $background;
 }
 
 td.hljs-ln-line.hljs-ln-numbers {
-  border-right: rgba($text, .25) 1px solid;
+  box-shadow: 1px 0 rgba($text, .25);
+  position: sticky;
+  left: -7px;
+  background: $background;
 }
 
 .hljs-ln .hljs-ln-line {

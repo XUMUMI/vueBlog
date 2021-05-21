@@ -1,7 +1,7 @@
 import { defaultPackName } from "@/assets/info/information";
 import getPack from "@/util/posts/getPack";
 import register from "@/util/articleRegister";
-import component from "@/views/App/Article/Article.vue";
+import component from "@/views/Article/Article.vue";
 
 const files = require.context("@/assets/posts/", true, /\.md$/);
 

@@ -7,17 +7,19 @@
       color: $text;
 
       &:hover {
-        color: $link;
+        color: $link !important;
       }
     }
   }
 }
 
 @mixin highlight($link: dodgerblue) {
-  p a,
-  .page h2::before,
-  .page h3::before {
-    color: $link;
+  .page{
+    p a,
+    h2::before,
+    h3::before {
+      color: $link;
+    }
   }
 }
 

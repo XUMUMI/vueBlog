@@ -1,4 +1,4 @@
-import Item from "@/views/App/Archives/Post/Item/Item.vue";
+import Item from "./Item/Item.vue";
 
 export default {
   name: "Post",

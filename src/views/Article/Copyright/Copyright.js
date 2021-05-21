@@ -5,10 +5,9 @@ export default {
   name: "Copyright",
   data() {
     return {
-      nickName,
-      license,
-      year: new Date().getFullYear(),
-      link: copyright[license]
+      author: this.$marked(`by ${nickName}`),
+      copyright: this.$marked(`Copyright ©️ ${new Date().getFullYear()}
+       [${license}](${copyright[license]}) LICENSE`)
     };
   }
 };

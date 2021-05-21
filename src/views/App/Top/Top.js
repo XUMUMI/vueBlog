@@ -1,6 +1,4 @@
 export default {
   name: "Top",
-  props: {
-    title: String
-  }
+  props: { title: String }
 };

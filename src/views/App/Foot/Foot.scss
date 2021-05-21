@@ -1,5 +1,9 @@
 $height: 4rem;
 .foot {
+  p {
+    display: unset;
+  }
+
   height: $height;
   line-height: $height;
   text-align: center;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Post
+    <Contents
       v-for="post in posts"
       :key="post"
       :articles="post.articles"

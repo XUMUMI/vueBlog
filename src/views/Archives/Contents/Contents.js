@@ -1,7 +1,7 @@
 import Item from "./Item/Item.vue";
 
 export default {
-  name: "Post",
+  name: "Contents",
   components: { Item },
   props: {
     pack: String,

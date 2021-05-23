@@ -10,5 +10,5 @@
     />
   </div>
 </template>
-<script src="./Post.js" />
-<style lang="scss" scoped src="./Post.scss" />
+<script src="./Contents.js" />
+<style lang="scss" scoped src="./Contents.scss" />

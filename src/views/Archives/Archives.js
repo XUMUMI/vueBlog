@@ -1,9 +1,9 @@
-import Post from "./Post/Post.vue";
+import Contents from "./Contents/Contents.vue";
 import { posts } from "@/util/posts";
 
 export default {
   name: "Archives",
-  components: { Post },
+  components: { Contents },
   data() {
     return { posts };
   }

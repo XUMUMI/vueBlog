@@ -8,15 +8,35 @@
  */
 export default (files, getFileInfo, setContents, routes) => {
   /* 遍历文件进行注册 */
-  files.keys().forEach(register);
+  let prev, next;
+  let prevLink, nextLink;
+  const filesList = files.keys();
+  let fileInfo = getFileInfo(filesList[0]);
+  let fileInfoNext;
+  for (let index = 0; index < filesList.length; ++index) {
+    if (index + 1 < filesList.length) {
+      /* 从回调函数获取文章详细信息 */
+      fileInfoNext = getFileInfo(filesList[index + 1]);
+      next = fileInfoNext.title;
+      nextLink = fileInfoNext.path;
+    } else {
+      next = "";
+      nextLink = "";
+    }
+    register(filesList[index], fileInfo);
+    prev = fileInfo.title;
+    prevLink = fileInfo.path;
+    fileInfo = fileInfoNext;
+  }
 
   /**
    * 注册文章函数
    * @param file 文件
+   * @param fileInfo 文件详细信息
    */
-  function register(file) {
+  function register(file, fileInfo) {
     /* 从回调函数获取文章详细信息 */
-    const { title, path, contents, component } = getFileInfo(file);
+    const { title, path, contents, component } = fileInfo;
     /* 将文件写入目录 */
     setContents(contents, file);
     /* 写入路由 */
@@ -25,7 +45,7 @@ export default (files, getFileInfo, setContents, routes) => {
       component,
       name: title,
       meta: { title },
-      props: { cont: files(file) }
+      props: { cont: files(file), prev, prevLink, next, nextLink }
     });
   }
 };

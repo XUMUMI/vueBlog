@@ -7,34 +7,32 @@
  * @param routes      要写入的路由
  */
 export default (files, getFileInfo, setContents, routes) => {
-  /* 遍历文件进行注册 */
-  let prev, next;
-  let prevLink, nextLink;
   const filesList = files.keys();
-  let fileInfo = getFileInfo(filesList[0]);
-  let fileInfoNext;
-  for (let index = 0; index < filesList.length; ++index) {
-    if (index + 1 < filesList.length) {
-      /* 从回调函数获取文章详细信息 */
-      fileInfoNext = getFileInfo(filesList[index + 1]);
-      next = fileInfoNext.title;
-      nextLink = fileInfoNext.path;
-    } else {
-      next = "";
-      nextLink = "";
-    }
-    register(filesList[index], fileInfo);
-    prev = fileInfo.title;
-    prevLink = fileInfo.path;
-    fileInfo = fileInfoNext;
+  /* 先读取第一篇文章的信息 */
+  let fileInfo = getFileInfo(filesList[0]),
+    prev = null,
+    next = null;
+  /* 遍历文件进行注册 */
+  for (let index = 0; index < filesList.length - 1; ++index) {
+    /* 得到下一篇文章 */
+    next = getFileInfo(filesList[index + 1]);
+    /* 把信息注册到目录和路由 */
+    register(filesList[index], fileInfo, prev, next);
+    /* 更新前驱记录 */
+    prev = fileInfo;
+    /* 更新当前文章 */
+    fileInfo = next;
   }
+  register(filesList[filesList.length - 1], fileInfo, prev, null);
 
   /**
    * 注册文章函数
    * @param file 文件
    * @param fileInfo 文件详细信息
+   * @param prev 上一篇文章
+   * @param next 下一篇文章
    */
-  function register(file, fileInfo) {
+  function register(file, fileInfo, prev, next) {
     /* 从回调函数获取文章详细信息 */
     const { title, path, contents, component } = fileInfo;
     /* 将文件写入目录 */
@@ -45,7 +43,7 @@ export default (files, getFileInfo, setContents, routes) => {
       component,
       name: title,
       meta: { title },
-      props: { cont: files(file), prev, prevLink, next, nextLink }
+      props: { cont: files(file), prev, next }
     });
   }
 };

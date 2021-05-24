@@ -8,9 +8,7 @@ export default {
   components: { Page, Copyright, Tags, Nav },
   props: {
     cont: String,
-    prev: String,
-    prevLink: String,
-    next: String,
-    nextLink: String
+    prev: Object,
+    next: Object
   }
 };

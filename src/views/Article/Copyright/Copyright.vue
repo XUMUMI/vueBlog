@@ -1,6 +1,6 @@
 <template>
   <div class="copyright">
-    <p v-html="author" />
+    <p>by {{ author }}</p>
     <p v-html="copyright" />
   </div>
 </template>

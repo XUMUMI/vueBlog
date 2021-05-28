@@ -1,0 +1,22 @@
+{
+  "QQ": {
+  "path": "https://wpa.qq.com/msgrd?v=3&uin=869088047&site=qq&menu=yes",
+  "icon": "qq"
+},
+  "Wechat": {
+    "path": "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIxMzQ2MjgwNw==&scene=124#wechat_redirect",
+    "icon": "wechat"
+  },
+  "AliPay": {
+    "path": "https://qr.alipay.com/a7x12004yysxu9qcfutcud4",
+    "icon": "alipay"
+  },
+  "Zhihu": {
+    "path": "https://www.zhihu.com/people/xumumi",
+    "icon": "zhihu"
+  },
+  "WeiBo": {
+    "path": "https://weibo.com/XUMUMI",
+    "icon": "weibo"
+  }
+}

@@ -8,6 +8,8 @@ export default {
   components: { Page, Copyright, Tags, Nav },
   props: {
     cont: String,
+    author: String,
+    date: String,
     prev: Object,
     next: Object
   }

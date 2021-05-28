@@ -6,6 +6,8 @@
  * @param setContents 回调函数，用于将文章信息写入目录：传入 文章所在目录容器 和 单个文件，无需返回
  * @param routes      要写入的路由
  */
+import { nickName } from "@/assets/info/information";
+
 export default (files, getFileInfo, setContents, routes) => {
   const filesList = files.keys();
   /* 先读取第一篇文章的信息 */
@@ -35,15 +37,38 @@ export default (files, getFileInfo, setContents, routes) => {
   function register(file, fileInfo, prev, next) {
     /* 从回调函数获取文章详细信息 */
     const { title, path, contents, component } = fileInfo;
+    /* 获取文章内容 */
+    const cont = getCont(file);
     /* 将文件写入目录 */
-    setContents(contents, file);
+    setContents(contents, file, cont.date);
     /* 写入路由 */
     routes.push({
       path,
       component,
       name: title,
       meta: { title },
-      props: { cont: files(file), prev, next }
+      props: { ...cont, prev, next }
     });
+  }
+
+  function getCont(file) {
+    const div = document.createElement("div");
+    div.info = getInfo;
+    div.innerHTML = files(file);
+    const author = div.info("author") ?? nickName;
+    const date = div.info("date");
+    const cont = div.innerHTML;
+    return { cont, author, date };
+  }
+
+  function getInfo(name) {
+    const element = this.getElementsByTagName("h6")[0];
+    const cont = element?.innerHTML;
+    let info;
+    if (cont && cont?.indexOf(name) !== -1) {
+      info = cont.split(": ")[1];
+      this.removeChild(element);
+    }
+    return info;
   }
 };

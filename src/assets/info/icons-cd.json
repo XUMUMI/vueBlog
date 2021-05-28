@@ -1,0 +1,22 @@
+{
+  "Github": {
+    "path": "https://github.com/XUMUMI",
+    "icon": "github"
+  },
+  "Gitlab": {
+    "path": "https://gitlab.com/XUMUMI",
+    "icon": "gitlab"
+  },
+  "CodeSandBox": {
+    "path":"https://codesandbox.io/u/XUMUMI",
+    "icon": "codesandbox"
+  },
+  "Codepen": {
+    "path": "https://codepen.io/xumumi",
+    "icon": "codepen"
+  },
+  "Dribbble": {
+    "path": "https://dribbble.com/XUMUMI",
+    "icon": "dribbble"
+  }
+}

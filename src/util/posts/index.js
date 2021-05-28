@@ -32,10 +32,11 @@ const getFileInfo = file => {
  * 写入目录
  * @param contents 目录容器
  * @param file     文件
+ * @param date     修改日期
  */
-const setContents = (contents, file) => {
+const setContents = (contents, file, date) => {
   /* 写入目录 TODO 获取文件修改时间 */
-  contents.push({ ...getFileInfo(file), date: "by XUMUMI" });
+  contents.push({ ...getFileInfo(file), date });
 };
 
 /* 注册到目录和路由 */

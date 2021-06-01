@@ -51,16 +51,29 @@ export default (files, getFileInfo, setContents, routes) => {
     });
   }
 
+  /**
+   * 获取文件中的内容
+   * @param file 文件
+   * @returns {{date: *, author: (*|string), cont: HTMLDivElement}}
+   * date 日期，
+   * author 作者，
+   * cont 内容
+   */
   function getCont(file) {
-    const div = document.createElement("div");
-    div.info = getInfo;
-    div.innerHTML = files(file);
-    const author = div.info("author") ?? nickName;
-    const date = div.info("date");
-    const cont = div.innerHTML;
+    const cont = document.createElement("div");
+    cont.info = getInfo;
+    cont.innerHTML = files(file);
+    cont.getElementsByTagName("pre").forEach(formatCode);
+    const author = cont.info("author") ?? nickName;
+    const date = cont.info("date");
     return { cont, author, date };
   }
 
+  /**
+   * 拓展方法，获取文件信息
+   * @param name 信息名
+   * @returns {*} 信息内容
+   */
   function getInfo(name) {
     const element = this.getElementsByTagName("h6")[0];
     const cont = element?.innerHTML;
@@ -70,5 +83,14 @@ export default (files, getFileInfo, setContents, routes) => {
       this.removeChild(element);
     }
     return info;
+  }
+
+  /**
+   * 对代码块添加高亮显示和行号
+   * @param element 代码块
+   */
+  function formatCode(element) {
+    window.hljs.highlightElement(element);
+    window.hljs.lineNumbersBlock(element);
   }
 };

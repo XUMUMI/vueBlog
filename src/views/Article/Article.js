@@ -7,7 +7,7 @@ export default {
   name: "Article",
   components: { Page, Copyright, Tags, Nav },
   props: {
-    cont: String,
+    cont: Object,
     author: String,
     date: String,
     prev: Object,

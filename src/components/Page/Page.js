@@ -1,7 +1,22 @@
 export default {
   name: "page",
-  props: { cont: Object },
+  props: { cont: Node },
   mounted() {
-    this.$refs.page.appendChild(this.cont);
+    this.flushCont(this.cont);
+  },
+  updated() {
+    this.flushCont(this.cont);
+  },
+  methods: {
+    /**
+     * 更新页面内容
+     * @param cont 页面内容
+     */
+    flushCont(cont) {
+      const page = this.$refs.page;
+      const child = page.lastChild;
+      if (child) page.removeChild(child);
+      page.appendChild(cont);
+    }
   }
 };
